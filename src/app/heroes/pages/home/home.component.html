@@ -1,0 +1,12 @@
+<div class="container">
+    <mat-toolbar class="toolbar">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-sidenav-container fullscreen>
+        <mat-sidenav #sidenav [(opened)]="opened" [opened]="mobileQuery.matches ? 'false' : 'true'" [mode]="mobileQuery.matches ? 'over' : 'side'">
+            <h1>Sidenav</h1>
+        </mat-sidenav>
+    </mat-sidenav-container>
+</div>
